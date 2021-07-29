@@ -29,6 +29,10 @@ class Game
         form.display();
     }
 
+    back=createSprite(665,325);
+    back.scale=3;
+    back.addImage(bg);
+
     guard=createSprite(200,600);
     guard.addAnimation("guard",guardimg);
     guard.scale=0.7;
@@ -51,7 +55,8 @@ class Game
     if(allPlayers !== undefined)
     {
       background(0);
-      image(bg,0,0, 1330*9,750);
+      //image(bg,0,0, 1330*9,750);
+   
       var index = 0;
       
       for(var plr in allPlayers)
@@ -100,7 +105,21 @@ class Game
       player.update();
     }
 
+    if(keyIsDown(UP_ARROW) && player.index!==null)
+    {
    
+      player.y =player.y- 10;
+      
+      player.update();
+    }
+
+    if(keyIsDown(DOWN_ARROW) && player.index!==null)
+    {
+   
+      player.y =player.y+ 10;
+      
+      player.update();
+    }
 
 
     
@@ -116,3 +135,4 @@ class Game
   }
   
 }
+
