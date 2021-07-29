@@ -2,6 +2,7 @@ var bg, thiefimg,thief, guard,guardimg,bank;
 var database,gameState=0,game,player,playerCount,form,players,allPlayers;
 var x,y;
 var distance=0;
+var back;
 
 function preload()
 {
